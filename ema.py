@@ -9,7 +9,7 @@ while(True) :
     try:
         symbol = sys.argv[1]
         ts = TechIndicators(key='X7GN8OP6JOXQGTOH', output_format='pandas')
-        data, meta_data = ts.get_sma(symbol=symbol, interval='1min')
+        data, meta_data = ts.get_ema(symbol=symbol, interval='1min')
         data.to_csv('EMA_'+symbol+'.csv')
         print("saved and going to sleep")
         time.sleep(40)
